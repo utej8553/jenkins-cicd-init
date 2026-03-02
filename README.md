@@ -5,13 +5,13 @@ For Jenkins Master:
 For Jenkins Agent:
 22(ssh)
 
-sh```
+```sh
 sudo apt update
 sudo apt install fontconfig openjdk-21-jre
 java -version
 ```
 
-sh```
+```sh
 sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
 echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
@@ -21,12 +21,11 @@ sudo apt update
 sudo apt install jenkins
 ```
 
-sh```  
+```sh
 sudo systemctl enable jenkins
 sudo systemctl start jenkins
 sudo systemctl status jenkins
 ```
-sh```
-
+```sh
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
